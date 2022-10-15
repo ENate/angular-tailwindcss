@@ -1,0 +1,71 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local on arm64/Apple Silicon.
+		"args": {
+			"VARIANT": "16-bullseye"
+		}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"GitHub.vscode-pull-request-github",
+				"vscjava.vscode-java-pack",
+				"Pivotal.vscode-boot-dev-pack",
+				"vscjava.vscode-lombok",
+				"eamodio.gitlens",
+				"felipecaputo.git-project-manager",
+				"dbaeumer.vscode-eslint",
+				"ms-vscode.cpptools-extension-pack",
+				"donjayamanne.python-extension-pack",
+				"evondev.indent-rainbow-palettes",
+				"donjayamanne.git-extension-pack",
+				"esbenp.prettier-vscode",
+				"redhat.vscode-xml",
+				"rangav.vscode-thunder-client",
+				"developersoapbox.vscode-springboot-developer-pack",
+				"ms-azuretools.vscode-dapr",
+				"bierner.markdown-preview-github-styles",
+				"oderwat.indent-rainbow",
+				"cweijan.git-graph-history",
+				"mhutchie.git-graph",
+				"ms-vscode.makefile-tools",
+				"mongodb.mongodb-vscode",
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools",
+				"loiane.angular-extension-pack"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+	"features": {
+		"docker-in-docker": "latest",
+		"docker-from-docker": "latest",
+		"kubectl-helm-minikube": "latest",
+		"terraform": "latest",
+		"git-lfs": "latest",
+		"github-cli": "latest",
+		"python": "latest",
+		"java": "lts",
+		"maven": "latest",
+		"rust": "latest"
+	}
+}
